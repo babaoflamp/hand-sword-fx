@@ -1,0 +1,47 @@
+body {
+  margin: 0;
+  overflow: hidden;
+  background-color: #000;
+  color: white;
+  font-family: sans-serif;
+}
+
+canvas {
+  display: block;
+}
+
+#video-container {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  z-index: 10;
+  opacity: 0.3; /* 반투명하게 해서 3D 효과 방해 최소화 */
+  pointer-events: none;
+}
+
+#video-container video, #video-container canvas {
+  width: 160px;
+  height: auto;
+  transform: scaleX(-1); /* 거울 모드 */
+  border-radius: 8px;
+}
+
+#video-container canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+}
+
+.instructions {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+  z-index: 10;
+  pointer-events: none;
+  background: rgba(0,0,0,0.5);
+  padding: 10px 20px;
+  border-radius: 20px;
+}
